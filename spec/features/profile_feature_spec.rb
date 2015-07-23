@@ -21,4 +21,20 @@ describe 'Profiles' do
       expect(page).to have_content 'test'
     end
   end
+
+  context 'a returning user' do
+    scenario 'with a profile' do
+      create_profile
+      expect(page).not_to have_content 'create profile'
+    end
+  end
+
+  def create_profile
+    click_link 'create profile'
+    fill_in 'Name', with: 'test'
+    fill_in 'Username', with: 'username'
+    fill_in 'Location', with: 'London'
+    fill_in 'Bio', with: 'A little about test'
+    click_button 'Create Profile'
+  end
 end
