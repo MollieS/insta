@@ -1,0 +1,11 @@
+<%= form_for Profile.new, url: user_profile_path do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :username %>
+  <%= f.text_field :username %>
+  <%= f.label :location %>
+  <%= f.text_field :location %>
+  <%= f.label :bio %>
+  <%= f.text_field :bio %>
+  <%= f.submit %>
+<% end %>
