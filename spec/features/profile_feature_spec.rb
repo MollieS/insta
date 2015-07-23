@@ -23,9 +23,17 @@ describe 'Profiles' do
   end
 
   context 'a returning user' do
-    scenario 'with a profile' do
+    before(:each) do
       create_profile
+    end
+    scenario 'with a profile' do
       expect(page).not_to have_content 'create profile'
+    end
+
+    scenario 'views their profile' do
+      visit '/'
+      click_link 'profile'
+      expect(page).to have_content 'test'
     end
   end
 
