@@ -53,9 +53,12 @@
       "/Users/mollie/Makers/insta/app/controllers/likes_controller.rb": [
         1,
         1,
-        0,
-        0,
-        0,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
         null,
         null
       ],
@@ -119,6 +122,6 @@
         null
       ]
     },
-    "timestamp": 1437754349
+    "timestamp": 1437755330
   }
 }

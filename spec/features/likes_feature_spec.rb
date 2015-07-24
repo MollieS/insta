@@ -1,7 +1,7 @@
 require 'rails_helper'
 require_relative 'helpers.rb'
 
-describe 'liking photos' do
+describe 'liking photos', js: true do
   before do
     sign_up
     create_profile

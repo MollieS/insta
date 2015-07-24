@@ -9,7 +9,8 @@
     <% @photos.each do |photo| %>
       <%= photo.title %>
       <%= image_tag photo.image.url(:thumb) %>
-      <%= pluralize photo.likes.count, 'like' %>
+      <%= link_to 'like', photo_likes_path(photo.id), class: 'likes-link' %>
+      <span class="likes_count"> <%= photo.likes.count %> </span> <%= 'like'.pluralize(photo.likes.count) %>
     <% end %>
     <% else %>
       <p>no users yet</p>
