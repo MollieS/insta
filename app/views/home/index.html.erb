@@ -23,6 +23,8 @@
       <%= link_to profile.username,  user_profile_index_path(profile.user_id) %>
       <%= profile.name %>
       <%= image_tag profile.image.url(:thumb) %>
+      <%= link_to 'follow', profile_followers_path(profile.id), class: 'follow-link' %>
+      <span class='follow_count'> <%= profile.followers.count %> </span> <%= 'follower'.pluralize(profile.followers.count) %>
     <% end %>
     <% else %>
       <p>no users yet</p>
