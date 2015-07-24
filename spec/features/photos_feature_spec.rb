@@ -17,6 +17,17 @@ describe 'Photos' do
       click_link 'add a photo'
       expect(page).to have_button 'Create Photo'
     end
+    
+    scenario 'photo uploaded' do
+      sign_up
+      create_profile
+      click_link 'add a photo'
+      fill_in 'Title', with: 'test photo'
+      fill_in 'Location', with: 'London'
+      click_button 'Create Photo'
+      expect(page).to have_content 'test photo'
+      expect(page).not_to have_content 'no photos yet'
+    end
   end
 
 end
