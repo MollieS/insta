@@ -5,7 +5,7 @@
 <%="bio: #{ @profile.bio }" %>
 <%= image_tag @profile.image.url(:thumb) %>
 <h3>your photos</h3>
-<% if @photos == [nil] %>
+<% if @photos.empty? %>
   no photos yet
 <% else %>
   <% @photos.each do |photo| %>

@@ -15,8 +15,7 @@ class ProfilesController < ApplicationController
 
  def show
    @profile = Profile.find_by(user_id: current_user.id)
-   @photos = []
-   @photos << Photo.find_by(user_id: current_user.id)
+   @photos = Photo.where(user_id: current_user.id).all
    p @photos
  end
 end
