@@ -15,7 +15,7 @@ describe 'Photos' do
       sign_up
       create_profile
       click_link 'add a photo'
-      expect(page).to have_content 'upload file'
+      expect(page).to have_button 'Create Photo'
     end
   end
 
