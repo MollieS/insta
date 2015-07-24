@@ -15,3 +15,10 @@ def create_profile
   fill_in 'Bio', with: 'A little about test'
   click_button 'Create Profile'
 end
+
+def add_photo
+  click_link 'add a photo'
+  fill_in 'Title', with: 'test photo'
+  fill_in 'Location', with: 'London'
+  click_button 'Create Photo'
+end

@@ -30,4 +30,20 @@ describe 'Photos' do
     end
   end
 
+  context 'adding muliple photos' do
+    before(:each) do
+      sign_up
+      create_profile
+      add_photo
+    end
+
+    scenario 'a second photo' do
+      click_link 'add a photo'
+      fill_in 'Title', with: 'test photo2'
+      click_button 'Create Photo'
+      expect(page).to have_content 'test photo2'
+      expect(page).to have_content 'test photo'
+    end
+  end
+
 end
