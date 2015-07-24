@@ -46,8 +46,15 @@ describe 'Photos' do
     end
   end
 
-  context 'viewing other users photos' do
-    scenario 'on their profile'
+  context 'viewing photos' do
+    scenario 'on the homepage' do
+      sign_up
+      create_profile
+      add_photo
+      click_link 'Sign out'
+      sign_up('another@test.com', 'password')
+      expect(page).to have_content 'test photo'
+    end
   end
 
 end

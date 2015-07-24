@@ -33,4 +33,12 @@ describe 'Profiles' do
     end
   end
 
+  context 'viewing profiles' do
+    scenario 'from the homepage' do
+      create_profile
+      click_link 'Sign out'
+      visit '/'
+      expect(page).to have_content '@user'
+    end
+  end
 end

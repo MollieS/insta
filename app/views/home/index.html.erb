@@ -1,1 +1,30 @@
-Hello
+<h1>insta</h1>
+<h3>a platform for sharing photos</h3>
+<h5>popular photos</h5>
+<div id='popular_photos'>
+</div>
+<h5>recent photos</h5>
+<div id="recent_photos">
+  <% if @photos %>
+    <% @photos.each do |photo| %>
+      <%= photo.title %>
+      <%= image_tag photo.image.url(:thumb) %>
+    <% end %>
+    <% else %>
+      <p>no users yet</p>
+  <% end %>
+</div>
+<h5>popular users</h5>
+<div id='popular_users'>
+  <% if @profiles %>
+    <% @profiles.each do |profile| %>
+      <%= profile.username %>
+      <%= profile.name %>
+      <%= image_tag profile.image.url(:thumb) %>
+    <% end %>
+    <% else %>
+      <p>no users yet</p>
+    <% end %>
+</div>
+<h5>photos for you</h5>
+<div id='users_photos'></div>

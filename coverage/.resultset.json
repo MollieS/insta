@@ -30,6 +30,8 @@
       "/Users/mollie/Makers/insta/app/controllers/home_controller.rb": [
         1,
         1,
+        32,
+        32,
         null,
         null
       ],
@@ -46,14 +48,14 @@
         null,
         null,
         1,
-        3,
-        3,
-        3,
-        3,
+        4,
+        4,
+        4,
+        4,
         null,
         null,
         1,
-        3,
+        4,
         null,
         null
       ],
@@ -63,19 +65,19 @@
         null,
         null,
         1,
-        7,
-        7,
-        7,
-        7,
+        9,
+        9,
+        9,
+        9,
         null,
         null,
         1,
-        7,
+        9,
         null,
         null,
         1,
-        12,
-        12,
+        15,
+        15,
         null,
         null
       ],
@@ -94,6 +96,6 @@
         null
       ]
     },
-    "timestamp": 1437743240
+    "timestamp": 1437747753
   }
 }
