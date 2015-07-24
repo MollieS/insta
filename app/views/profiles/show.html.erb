@@ -2,3 +2,8 @@
 <%="username: #{ @profile.username }" %>
 <%="location: #{ @profile.location }" %>
 <%="bio: #{ @profile.bio }" %>
+<%= image_tag @profile.image.url(:thumb) %>
+
+no photos yet
+<%= link_to "add a photo", new_user_photos_path %>
+
