@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   resources :users, shallow: true do
     resources :profile, :photos do
-      resource :likes, :followers
+      resource :likes, :followers, :comments
     end
   end
   # You can have the root of your site routed with "root"

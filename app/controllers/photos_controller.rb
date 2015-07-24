@@ -9,6 +9,11 @@ class PhotosController < ApplicationController
     redirect_to user_profile_index_path(current_user)
   end
 
+  def show
+    @photo = Photo.find_by(id: params[:id])
+    @comments = Comment.where(photo_id: @photo.id)
+  end
+
   def photo_params
     params.require(:photo).permit(:title, :location, :image)
   end

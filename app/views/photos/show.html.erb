@@ -1,0 +1,14 @@
+<h1><%=  @photo.title %> </h1>
+<div id='image'>
+  <%= image_tag @photo.image.url(:medium) %>
+</div>
+<%= form_for Comment.new, url: photo_comments_path(@photo.id) do |f| %>
+  <%= f.label :text %>
+  <%= f.text_field :text %>
+  <%= f.submit %>
+<% end %>
+<% @comments.each do |comment| %>
+  <%= comment.text %>
+  <% @profile = Profile.find_by(user_id: comment.user_id) %>
+  <%= @profile.username %>
+<% end %>

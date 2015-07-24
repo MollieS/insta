@@ -15,6 +15,10 @@
         1,
         null
       ],
+      "/Users/mollie/Makers/insta/app/helpers/comments_helper.rb": [
+        1,
+        null
+      ],
       "/Users/mollie/Makers/insta/app/helpers/followers_helper.rb": [
         1,
         null
@@ -35,11 +39,17 @@
         1,
         null
       ],
-      "/Users/mollie/Makers/insta/app/controllers/followers_controller.rb": [
+      "/Users/mollie/Makers/insta/app/controllers/comments_controller.rb": [
         1,
         null,
         1,
         1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
         1,
         1,
         null,
@@ -52,11 +62,21 @@
         1,
         null
       ],
+      "/Users/mollie/Makers/insta/app/controllers/followers_controller.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/mollie/Makers/insta/app/controllers/home_controller.rb": [
         1,
         1,
-        45,
-        45,
+        48,
+        48,
         null,
         null
       ],
@@ -82,6 +102,11 @@
         6,
         6,
         6,
+        null,
+        null,
+        1,
+        2,
+        2,
         null,
         null,
         1,
@@ -111,6 +136,11 @@
         null,
         null
       ],
+      "/Users/mollie/Makers/insta/app/models/comment.rb": [
+        1,
+        1,
+        null
+      ],
       "/Users/mollie/Makers/insta/app/models/follower.rb": [
         1,
         1,
@@ -122,6 +152,7 @@
         null
       ],
       "/Users/mollie/Makers/insta/app/models/photo.rb": [
+        1,
         1,
         1,
         1,
@@ -140,6 +171,6 @@
         null
       ]
     },
-    "timestamp": 1437758353
+    "timestamp": 1437764761
   }
 }
