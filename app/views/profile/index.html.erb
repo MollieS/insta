@@ -1,10 +1,10 @@
-<h1>your profile</h1>
+<h1>profile</h1>
 <%="name: #{ @profile.name }" %>
 <%="username: #{ @profile.username }" %>
 <%="location: #{ @profile.location }" %>
 <%="bio: #{ @profile.bio }" %>
 <%= image_tag @profile.image.url(:thumb) %>
-<h3>your photos</h3>
+<h3>photos</h3>
 <% if @photos.empty? %>
   no photos yet
 <% else %>
@@ -14,5 +14,7 @@
     <%= image_tag photo.image.url(:thumb) %>
   <% end %>
 <% end %>
-<%= link_to "add a photo", new_user_photos_path %>
+<% if @profile.user_id == current_user.id %>
+  <%= link_to "add a photo", new_user_photo_path(current_user) %>
+<% end %>
 

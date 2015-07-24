@@ -1,4 +1,4 @@
-class ProfilesController < ApplicationController
+class ProfileController < ApplicationController
  def new
  end
 
@@ -6,15 +6,15 @@ class ProfilesController < ApplicationController
    @profile = Profile.create(profile_params)
    @profile.user_id = current_user.id
    @profile.save
-   redirect_to user_profile_path(current_user) 
+   redirect_to user_profile_index_path(current_user) 
  end
 
  def profile_params
    params.require(:profile).permit(:username, :name, :location, :bio, :image)
  end
 
- def show
-   @profile = Profile.find_by(user_id: current_user.id)
-   @photos = Photo.where(user_id: current_user.id).all
+ def index
+   @profile = Profile.find_by(user_id: params[:user_id])
+   @photos = Photo.where(user_id: @profile.user_id)
  end
 end

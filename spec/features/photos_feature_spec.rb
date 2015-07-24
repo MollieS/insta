@@ -55,6 +55,17 @@ describe 'Photos' do
       sign_up('another@test.com', 'password')
       expect(page).to have_content 'test photo'
     end
+
+    scenario 'on a user profile' do
+      sign_up
+      create_profile
+      add_photo
+      click_link 'Sign out'
+      sign_up('another@test.com', 'password')
+      click_link '@user'
+      expect(page).to have_content 'test photo'
+      expect(page).not_to have_content 'add a photo'
+    end
   end
 
 end

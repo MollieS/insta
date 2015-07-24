@@ -9,6 +9,7 @@
     <% @photos.each do |photo| %>
       <%= photo.title %>
       <%= image_tag photo.image.url(:thumb) %>
+      <%= pluralize photo.likes.count, 'like' %>
     <% end %>
     <% else %>
       <p>no users yet</p>
@@ -18,7 +19,7 @@
 <div id='popular_users'>
   <% if @profiles %>
     <% @profiles.each do |profile| %>
-      <%= profile.username %>
+      <%= link_to profile.username,  user_profile_index_path(profile.user_id) %>
       <%= profile.name %>
       <%= image_tag profile.image.url(:thumb) %>
     <% end %>

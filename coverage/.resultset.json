@@ -19,7 +19,15 @@
         1,
         null
       ],
+      "/Users/mollie/Makers/insta/app/helpers/likes_helper.rb": [
+        1,
+        null
+      ],
       "/Users/mollie/Makers/insta/app/helpers/photos_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/mollie/Makers/insta/app/helpers/profile_helper.rb": [
         1,
         null
       ],
@@ -30,8 +38,8 @@
       "/Users/mollie/Makers/insta/app/controllers/home_controller.rb": [
         1,
         1,
-        32,
-        32,
+        40,
+        40,
         null,
         null
       ],
@@ -42,46 +50,61 @@
         1,
         null
       ],
+      "/Users/mollie/Makers/insta/app/controllers/likes_controller.rb": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null
+      ],
       "/Users/mollie/Makers/insta/app/controllers/photos_controller.rb": [
         1,
         1,
         null,
         null,
         1,
-        4,
-        4,
-        4,
-        4,
+        6,
+        6,
+        6,
+        6,
         null,
         null,
         1,
-        4,
+        6,
         null,
         null
       ],
-      "/Users/mollie/Makers/insta/app/controllers/profiles_controller.rb": [
+      "/Users/mollie/Makers/insta/app/controllers/profile_controller.rb": [
         1,
         1,
         null,
         null,
         1,
-        9,
-        9,
-        9,
-        9,
+        11,
+        11,
+        11,
+        11,
         null,
         null,
         1,
-        9,
+        11,
         null,
         null,
         1,
-        15,
-        15,
+        20,
+        20,
         null,
+        null
+      ],
+      "/Users/mollie/Makers/insta/app/models/like.rb": [
+        1,
+        1,
         null
       ],
       "/Users/mollie/Makers/insta/app/models/photo.rb": [
+        1,
         1,
         1,
         null,
@@ -96,6 +119,6 @@
         null
       ]
     },
-    "timestamp": 1437747753
+    "timestamp": 1437754349
   }
 }
