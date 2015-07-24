@@ -11,7 +11,7 @@
   <% @photos.each do |photo| %>
     <%= photo.title %>
     <%= photo.location %>
-    <%= photo.image.url(:thumb) %>
+    <%= image_tag photo.image.url(:thumb) %>
   <% end %>
 <% end %>
 <%= link_to "add a photo", new_user_photos_path %>

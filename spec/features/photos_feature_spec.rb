@@ -11,14 +11,14 @@ describe 'Photos' do
      expect(page).to have_link "add a photo"
     end
 
-    scenario 'uploading a photo' do
+    scenario 'they can upload a photo' do
       sign_up
       create_profile
       click_link 'add a photo'
       expect(page).to have_button 'Create Photo'
     end
     
-    scenario 'photo uploaded' do
+    scenario 'they can view their photo' do
       sign_up
       create_profile
       click_link 'add a photo'
@@ -30,20 +30,24 @@ describe 'Photos' do
     end
   end
 
-  context 'adding muliple photos' do
+  context 'when a user has uploaded a photo' do
     before(:each) do
       sign_up
       create_profile
       add_photo
     end
 
-    scenario 'a second photo' do
+    scenario 'they can upload a second photo' do
       click_link 'add a photo'
       fill_in 'Title', with: 'test photo2'
       click_button 'Create Photo'
       expect(page).to have_content 'test photo2'
       expect(page).to have_content 'test photo'
     end
+  end
+
+  context 'viewing other users photos' do
+    scenario 'on their profile'
   end
 
 end
