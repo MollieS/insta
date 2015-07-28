@@ -3,7 +3,7 @@ require_relative 'helpers.rb'
 
 describe 'Photos' do
   context 'when a user has not uploaded photos' do
-    scenario 'they are prompted to upload one' do
+    scenario 'they should be prompted to upload one' do
      sign_up
      create_profile
      click_link 'profile'
@@ -11,14 +11,16 @@ describe 'Photos' do
      expect(page).to have_link "add a photo"
     end
 
-    scenario 'they can upload a photo' do
+    scenario 'they should be able to upload a photo' do
       sign_up
       create_profile
       click_link 'add a photo'
       expect(page).to have_button 'Create Photo'
     end
-    
-    scenario 'they can view their photo' do
+  end
+
+  context 'when a user uploads a photo' do
+    scenario 'they should see their photo' do
       sign_up
       create_profile
       click_link 'add a photo'
@@ -37,7 +39,7 @@ describe 'Photos' do
       add_photo
     end
 
-    scenario 'they can upload a second photo' do
+    scenario 'they should be able to upload a second photo' do
       click_link 'add a photo'
       fill_in 'Title', with: 'test photo2'
       click_button 'Create Photo'
@@ -46,8 +48,8 @@ describe 'Photos' do
     end
   end
 
-  context 'viewing photos' do
-    scenario 'on the homepage' do
+  context 'uploaded photos' do
+    scenario 'should be visible on the homepage' do
       sign_up
       create_profile
       add_photo
@@ -56,7 +58,7 @@ describe 'Photos' do
       expect(page).to have_content 'test photo'
     end
 
-    scenario 'on a user profile' do
+    scenario 'should be visible on a user profile' do
       sign_up
       create_profile
       add_photo

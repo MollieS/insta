@@ -1,34 +1,34 @@
-<h1>insta</h1>
-<h3>a platform for sharing photos</h3>
-<h5>popular photos</h5>
-<div id='popular_photos'>
-</div>
-<h5>recent photos</h5>
-<div id="recent_photos">
+<h1 class='title'>insta</h1>
+<h3 id="subheader">a platform for sharing photos</h3>
+<h4>popular photos</h4>
+<div id="popular-photos">
   <% if @photos %>
     <% @photos.each do |photo| %>
-      <%= photo.title %>
-      <%= link_to image_tag(photo.image.url(:thumb)), photo_path(photo.id), class: photo.title %>
-      <%= link_to 'like', photo_likes_path(photo.id), class: 'likes-link' %>
-      <span class="likes_count"> <%= photo.likes.count %> </span> <%= 'like'.pluralize(photo.likes.count) %>
+      <div id='photos'>
+      <h5><%= photo.title %></h5>
+      <%= link_to image_tag(photo.image.url(:medium), id: 'recent-photo') ,photo_path(photo.id), id: photo.title %>
+      <p><span class="likes_count"> <%= photo.likes.count %> </span> <%= 'like'.pluralize(photo.likes.count) %><br>
+      <%= link_to 'like', photo_likes_path(photo.id), class: 'likes-link' %></p>
+    </div>
     <% end %>
     <% else %>
       <p>no users yet</p>
   <% end %>
 </div>
-<h5>popular users</h5>
+<h4>popular users</h4>
 <div id='popular_users'>
   <% if @profiles %>
     <% @profiles.each do |profile| %>
-      <%= link_to profile.username,  user_profile_index_path(profile.user_id) %>
-      <%= profile.name %>
-      <%= image_tag profile.image.url(:thumb) %>
-      <%= link_to 'follow', profile_followers_path(profile.id), class: 'follow-link' %>
-      <span class='follow_count'> <%= profile.followers.count %> </span> <%= 'follower'.pluralize(profile.followers.count) %>
+      <div id='profiles'>
+        <h5> <%= link_to profile.username,  user_profile_index_path(profile.user_id) %> </h5>
+        <div><%= image_tag profile.image.url(:thumb), class: "profile-image" %></div>
+        <p> <span class='follow_count'> <%= profile.followers.count %> </span> <%= 'follower'.pluralize(profile.followers.count) %><br>
+        <%= link_to 'follow', profile_followers_path(profile.id), class: 'follow-link' %></p>
+    </div>
     <% end %>
     <% else %>
       <p>no users yet</p>
     <% end %>
 </div>
-<h5>photos for you</h5>
+<h4>photos for you</h4>
 <div id='users_photos'></div>

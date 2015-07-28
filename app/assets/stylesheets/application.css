@@ -1,15 +1,86 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+
+ body {
+  font-family: 'Josefin Sans';
+}
+
+div {
+  display: inline-block;
+  margin: 20px;
+}
+
+.profile-image {
+  border-radius: 100%;
+  height: 80px;
+  width: 80px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 60px;
+}
+
+#subheader {
+  text-align: center;
+}
+
+.solo-image {
+  height: 800px;
+  width: 800px;
+  margin: 0 auto;
+  display: block;
+}
+
+#solo-image {
+  margin: 0 auto;
+  display: block;
+  padding: 10px;
+}
+
+h5 {
+  margin: 5px;
+  font-size: 12px;
+}
+
+p {
+  margin: 2px;
+}
+
+#photos {
+  margin: 5px
+}
+
+#popular-photos {
+  margin: 5px;
+}
+
+#recent-photo {
+  height: 250px;
+  width: 250px;
+}
+
+.profile-picture {
+  border-style: solid;
+  border-color: black;
+  border-radius: 100%;
+  height: 100px;
+  width: 100px;
+}
+
+
+input {
+  border-top-style: none;
+  border-right-style: none;
+  border-bottom-style: solid;
+  border-left-style: none;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-bottom-style: none;
+}
+
+.user-photos {
+  height: 400px;
+  width: 400px;
+}
+

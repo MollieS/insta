@@ -1,14 +1,19 @@
 <h1><%=  @photo.title %> </h1>
-<div id='image'>
-  <%= image_tag @photo.image.url(:medium) %>
+<h3 id="subheader"><%= "by: #{@profile.username}" %>
+<div id='solo-image'>
+  <%= image_tag @photo.image.url(:large), class: 'solo-image' %>
 </div>
+<% @comments.each do |comment| %>
+  <p class="comment">
+  <%= comment.text %>
+  </p>
+  <% @profile = Profile.find_by(user_id: comment.user_id) %>
+  <p class="author"><%="  written by: #{ @profile.username}" %>
+  </p>
+<% end %>
 <%= form_for Comment.new, url: photo_comments_path(@photo.id) do |f| %>
   <%= f.label :text %>
   <%= f.text_field :text %>
   <%= f.submit %>
 <% end %>
-<% @comments.each do |comment| %>
-  <%= comment.text %>
-  <% @profile = Profile.find_by(user_id: comment.user_id) %>
-  <%= @profile.username %>
-<% end %>
+

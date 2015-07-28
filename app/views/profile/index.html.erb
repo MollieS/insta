@@ -1,20 +1,27 @@
-<h1>profile</h1>
-<%="name: #{ @profile.name }" %>
-<%="username: #{ @profile.username }" %>
-<%="location: #{ @profile.location }" %>
+<h1><%= "#{@profile.username}'s profile" %></h1>
+<div id='image'>
+<%= image_tag @profile.image.url(:medium), class: 'profile-picture' %>
+</div>
+<div id='details'>
+  <%="name: #{ @profile.name }" %><br>
+  <%="username: #{ @profile.username }" %><br>
+  <%="location: #{ @profile.location }" %><br>
 <%="bio: #{ @profile.bio }" %>
-<%= image_tag @profile.image.url(:thumb) %>
-<h3>photos</h3>
+</div>
+<h2><%= "#{@profile.username}'s photos" %></h2>
+<% if @profile.user_id == current_user.id %>
+  <%= link_to "add a photo", new_user_photo_path(current_user) %>
+<% end %>
+<br>
 <% if @photos.empty? %>
   no photos yet
 <% else %>
   <% @photos.each do |photo| %>
-    <%= photo.title %>
-    <%= photo.location %>
-    <%= image_tag photo.image.url(:thumb) %>
+  <div id=photos>
+    <%= photo.title %><br>
+    <%= photo.location %><br>
+    <%= image_tag photo.image.url(:medium), class: 'user-photos'%>
+  </div>
   <% end %>
-<% end %>
-<% if @profile.user_id == current_user.id %>
-  <%= link_to "add a photo", new_user_photo_path(current_user) %>
 <% end %>
 
