@@ -73,7 +73,7 @@ I would like to filter
 
 ####Tests
 
--rpsec
+- to run tests: `rpsec`
 
 
 
