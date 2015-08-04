@@ -61,15 +61,22 @@ I would like to filter
 ####To do
 
 - Add styling
+- Add a many_through relationship to followers
+- Add restrictions to likes & followers
 - Improve UX
 - Add tags and search/filter functionality
 
 ####How to run
 
+deployed to heroku here: https://instamollie.herokuapp.com/
+
+or
 - clone this repository
 - `cd insta`
+- `bundle` to install dependencies
+- `bin/rake db:create` will create the necessary database
+- `bin/rake db:migrate` will run all migrations
 - `bin/rails s` and visit localhost:3000
-- also on heroku: https://instamollie.herokuapp.com/
 
 ####Tests
 
